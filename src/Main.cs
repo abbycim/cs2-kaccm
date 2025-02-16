@@ -33,7 +33,7 @@ public class Main : BasePlugin
 
         _cooldowns.Add(player);
         AddTimer(3, () => { _cooldowns.Remove(player); });
-        command.ReplyToCommand(
+        Server.PrintToChatAll(
             $" {ChatColors.Blue}[{ChatColors.Gold}ABBY{ChatColors.Blue}] {ChatColors.Green}{player?.PlayerName} " +
             $"{ChatColors.White}Adlı oyuncunun malafatı {ChatColors.Red}{SayiUretici.SayiOlustur()}" +
             $"{ChatColors.White} cm!");
